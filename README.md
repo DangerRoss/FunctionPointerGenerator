@@ -1,6 +1,6 @@
 # Function Pointer Generator (FPG)
 
-FPG is a primitive code generator tool for C# intended for creating shared library function declarations using C# 9.0 function pointers. Function definitions to generate source code for are provided by either a text file of function signatures, or read from a .NET assembly containing PInvoke functions or Delegates. 
+FPG is a experimental primitive code generator tool for C# intended for creating shared library function declarations using C# 9.0 function pointers. Function definitions to generate source code for are provided by either a text file of function signatures, or read from a .NET assembly containing PInvoke functions or Delegates. 
 
 ## Example
 

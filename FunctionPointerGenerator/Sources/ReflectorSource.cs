@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -92,7 +93,9 @@ namespace FunctionPointerGenerator.Sources
                 name = name.Replace(nameof(Single), "float");
                 name = name.Replace(nameof(Double), "double");
                 name = name.Replace(nameof(Decimal), "decimal");
-                name = name.Replace(nameof(String), "string");
+                name = name.Replace(nameof(String), "byte*");
+                name = name.Replace(nameof(StringBuilder), "byte*");
+                name = name.Replace("string", "byte*");
                 name = name.Replace(nameof(Char), "char");
                 name = name.Replace("Void", "void");
 
@@ -101,6 +104,11 @@ namespace FunctionPointerGenerator.Sources
                     name = name.Replace(nameof(IntPtr), "nint");
                     name = name.Replace(nameof(UIntPtr), "nuint");
                 }                                  
+            }
+
+            if(type.IsArray)
+            {
+                name = name.Replace("[]", "*");
             }
 
             return name;            
