@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FunctionPointerGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    }
+  }
+}
