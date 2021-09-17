@@ -89,14 +89,14 @@ FPG can generate function calls from a couple of different sources including .NE
 | ---------------- | ------------------------------------------------------------ | --------- | ---------------------- |
 | `namespace`      | The namespace the generated class will be in                 | Required  | `namespace=Win32`      |
 | `class`          | The name of the generated class                              | Required  | `class=Kernel32`       |
-| `scope`          | `static instance` Specifies the generated class to be static or instance. Default is static. | Optional  | `scope=static`         |
-| `loader`         | `constructor function none` Specifies if the generated class includes function loading template using function, constructor or omitted. Default is function. | Optional  | `loader=function`      |
+| `scope`          | `static \| instance` Specifies the generated class to be static or instance. Default is static. | Optional  | `scope=static`         |
+| `loader`         | `constructor \| function \| none` Specifies if the generated class includes function loading template using function, constructor or omitted. Default is function. | Optional  | `loader=function`      |
 | `callconv`       | Declares default call convention to use when a function doesn't specify. If there is no default provided and a function doesn't specify, the function pointer has its call convention omitted and will use the preferred convention of the target platform. | Optional  | `callconv=Stdcall`     |
 | `indentation`    | Controls the indentation used in source generation. A non-zero value specifies number of spaces and a zero value specifies single tabs which is the default. | Optional  | `identation=4`         |
 | `out`            | Redirects the output to a specified file                     | Optional  | `out="Kernel32.cs"`    |
-| `wordtype`       | `nint IntPtr` determines which type to use when handling words. Only applicable for --delegate and --pinvoke commands. Default is `IntPtr` | Optional  | `wordtype=nint`        |
-| `preservebyrefs` | `true false` decides to preserve by reference parameters. When false, all by reference parameters are exported as pointers. Only applicable for --delegate and --pinvoke commands. Default is `true` | Optional  | `preservebyrefs=false` |
-| `preservetypes`  | `true false` decides to export types qualified exactly as they are defined. When `false` certain types such as primitives are exported as their reserved keywords rather than runtime type names. This also overrides the word type parameter when `true`. Only applicable for --delegate and --pinvoke commands. Default is `false` | Optional  | `preservetypes=true`   |
+| `wordtype`       | `nint \| IntPtr` determines which type to use when handling words. Only applicable for --delegate and --pinvoke commands. Default is `IntPtr` | Optional  | `wordtype=nint`        |
+| `preservebyrefs` | `true \| false` decides to preserve by reference parameters. When false, all by reference parameters are exported as pointers. Only applicable for --delegate and --pinvoke commands. Default is `true` | Optional  | `preservebyrefs=false` |
+| `preservetypes`  | `true \| false` decides to export types qualified exactly as they are defined. When `false` certain types such as primitives are exported as their reserved keywords rather than runtime type names. This also overrides the word type parameter when `true`. Only applicable for --delegate and --pinvoke commands. Default is `false` | Optional  | `preservetypes=true`   |
 
 
 
